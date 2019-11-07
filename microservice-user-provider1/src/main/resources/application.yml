@@ -5,6 +5,43 @@ spring:
     application:
         name: microservice-user-provider
 
+
+    jpa:
+#        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        generate-ddl: false
+        show-sql: true
+        hibernate:
+            ddl-auto: none
+        properties:
+            hibernate:
+                temp:
+                    use_jdbc_metadata_defaults: false
+
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:15432/home
+        username: home
+        password: 123456
+        type: com.alibaba.druid.pool.DruidDataSource
+        initialSize: 100
+        minIdle: 30
+        maxActive: 200
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT 1
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        filters: stat,wall,slf4j
+
+        devtools:
+            restart:
+                additional-paths: target/classes/
+
+
 eureka:
     client:
         serviceUrl:

@@ -4,10 +4,7 @@ server:
 spring:
     application:
         name: microservice-eureka-server
-    security:
-        user:
-            name: admin
-            password: admin
+
 
 eureka:
     client:

@@ -1,17 +1,25 @@
 package com.example.controller;
 
+import com.example.service.AlbumService;
+import com.example.utils.JsonResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import static com.example.utils.JsonResult.jsonResultSuccess;
+
 @RestController
 @RequestMapping("api/user")
 public class UserApi {
 
-    @GetMapping("{string}")
-    public String test(@PathVariable String string) {
-        return "Provider 1 -> Hello " + string;
+    @Autowired
+    private AlbumService albumService;
+
+    @GetMapping("{id}")
+    JsonResult findById(@PathVariable Long id) {
+        return jsonResultSuccess("Provider 1 ->", albumService.findById(id));
     }
 
 }
