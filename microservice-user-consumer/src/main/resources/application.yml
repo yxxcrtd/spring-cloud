@@ -5,15 +5,6 @@ spring:
     application:
         name: microservice-user-consumer
 
-eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://localhost:8761/eureka/
-
-
-provider:
-    url: http://MICROSERVICE-USER-PROVIDER/api/user/
-
 
 
     jpa:
@@ -26,7 +17,6 @@ provider:
             hibernate:
                 temp:
                     use_jdbc_metadata_defaults: false
-
 
     datasource:
         driver-class-name: org.postgresql.Driver
@@ -48,9 +38,22 @@ provider:
         maxPoolPreparedStatementPerConnectionSize: 20
         filters: stat,wall,slf4j
 
-
         devtools:
             restart:
                 additional-paths: target/classes/
 
+
+
+
+
+
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+
+provider:
+    url: http://MICROSERVICE-USER-PROVIDER/api/user/
 

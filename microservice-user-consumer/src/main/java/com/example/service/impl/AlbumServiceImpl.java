@@ -20,7 +20,7 @@ public class AlbumServiceImpl implements AlbumService {
     private AlbumRepository albumRepository;
 
     public Album findById(Long id) {
-        return albumRepository.getOne(id);
+        return albumRepository.findById(id).get();
     }
 
     @Transactional
