@@ -17,6 +17,7 @@
 		<module>microservice-user-consumer</module>
 		<module>microservice-user-consumer-feign</module>
 		<module>microservice-user-consumer-hystrix</module>
+		<module>microservice-skywalking</module>
 	</modules>
 
 	<properties>
@@ -86,6 +87,16 @@
 			<artifactId>druid</artifactId>
 			<version>LATEST</version>
 		</dependency>
+
+
+		<!-- APM 监控相关 -->
+		<dependency>
+			<groupId>org.apache.skywalking</groupId>
+			<artifactId>apm-toolkit-trace</artifactId>
+			<version>LATEST</version>
+		</dependency>
+
+
 
 	</dependencies>
 

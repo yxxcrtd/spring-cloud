@@ -12,17 +12,3 @@
 
 ## 整合 SkyWalking
 ### 官网：http://skywalking.apache.org
-
-### 1，安装 elasticsearch
-#### Data:    /usr/local/var/lib/elasticsearch/
-#### Logs:    /usr/local/var/log/elasticsearch/elasticsearch_young.log
-#### Plugins: /usr/local/var/elasticsearch/plugins/
-#### Config:  /usr/local/etc/elasticsearch/
-
-
-
-Mac 安装 ElasticSearch
-前提：需要安装：
-1，xcode-select --install
-2，brew install gcc
-3，brew install elasticsearch
