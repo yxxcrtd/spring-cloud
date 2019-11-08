@@ -18,7 +18,11 @@
 #### Logs:    /usr/local/var/log/elasticsearch/elasticsearch_young.log
 #### Plugins: /usr/local/var/elasticsearch/plugins/
 #### Config:  /usr/local/etc/elasticsearch/
-#### 运行：brew services start elasticsearch
-#### 不要后台服务的话，直接运行：elasticsearch
 
 
+
+Mac 安装 ElasticSearch
+前提：需要安装：
+1，xcode-select --install
+2，brew install gcc
+3，brew install elasticsearch
