@@ -18,6 +18,7 @@
 		<module>microservice-user-consumer-feign</module>
 		<module>microservice-user-consumer-hystrix</module>
 		<module>microservice-skywalking</module>
+		<module>microservice-zuul</module>
 	</modules>
 
 	<properties>
