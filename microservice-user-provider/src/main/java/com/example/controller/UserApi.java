@@ -25,7 +25,7 @@ public class UserApi {
 
     @GetMapping("{id}")
     JsonResult findById(@PathVariable Long id, HttpServletRequest request) {
-        logger.info("===<call trace-2, TraceId={}, SpanId={}>===",
+        logger.info("这是 Provider 0 === abc 123456 ===",
                 request.getHeader("X-B3-TraceId"), request.getHeader("X-B3-SpanId"));
 
         return jsonResultSuccess("Provider 0 ->", albumService.findById(id));

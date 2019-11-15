@@ -1,4 +1,4 @@
-package com.example;
+package com.example.listener;
 
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.eureka.registry.AbstractInstanceRegistry;

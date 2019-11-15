@@ -1,4 +1,4 @@
-package com.example;
+package com.example.listener;
 
 import com.netflix.discovery.shared.Applications;
 import com.netflix.eureka.EurekaServerContextHolder;

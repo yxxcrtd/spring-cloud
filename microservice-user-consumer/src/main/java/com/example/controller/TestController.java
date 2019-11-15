@@ -1,5 +1,7 @@
 package com.example.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,9 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestController
 @RequestMapping("manage/test")
 public class TestController {
+
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Autowired
     private RestTemplate restTemplate;
@@ -19,7 +25,8 @@ public class TestController {
     private String providerUrl;
 
     @GetMapping("{id}")
-    public Object add(@PathVariable Long id) {
+    public Object add(HttpServletRequest request, @PathVariable Long id) {
+        logger.info("这是 Consumer 的输出 abc 123 ......");
         return restTemplate.getForObject(providerUrl + id, Object.class);
     }
 
